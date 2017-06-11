@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600");
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  min-height: 100%;
+  width: 100vw;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-size-adjust: 100%; }
+
+body,
+html {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 300; }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 1180px;
+  box-sizing: border-box; }
+
+.is-hidden {
+  display: none; }
+
+.is-visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px); }
+  .is-visually-hidden.is-focusable:focus {
+    position: static;
+    clip: auto; }
+
+nav ul {
+  padding: 0; }
+
+nav li {
+  display: inline-block; }
+
+.title-box {
+  background: linear-gradient(-22deg, #7b64e2 30%, #311b92 100%);
+  position: relative;
+  color: #fff;
+  height: 280px; }
+  .title-box h1 {
+    font-style: italic;
+    font-size: 30px;
+    top: 3px;
+    left: 10px;
+    position: absolute;
+    margin: 0; }
+  .title-box h3 {
+    top: 113px;
+    position: absolute;
+    left: 46px;
+    font-size: 30px;
+    margin: 0; }
+
+.img-box {
+  background-image: url("themes/netcentric/title.small.png");
+  background-repeat: no-repeat;
+  height: 280px; }
+
+.home a {
+  color: #7b64e2; }
+
+.section-shop h2 {
+  color: #7b64e2;
+  font-size: 30px;
+  font-weight: 100; }

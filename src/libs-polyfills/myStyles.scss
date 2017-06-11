@@ -1,0 +1,57 @@
+@import '../themes/netcentric/netcentric';
+
+nav {
+  ul {
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+}
+
+.title-box {
+  @include theme-background;
+
+    position: relative;
+    color: #fff;
+    height: 280px;
+
+    h1 {
+      font-style: italic;
+      font-size: $font-size-headline-primary;
+      top: 3px;
+      left: 10px;
+      position: absolute;
+      margin: 0;
+    }
+
+    h3 {
+      top: 113px;
+      position: absolute;
+      left: 46px;
+      font-size: $font-size-headline-primary;
+      margin: 0;
+    }
+}
+
+.img-box {
+  background-image: url('themes/netcentric/title.small.png');
+  background-repeat: no-repeat;
+  height: 280px;
+}
+
+.home {
+  a {
+    color: $c-primary-lighter;
+  }
+}
+
+.section-shop {
+  h2 {
+    color: $c-primary-lighter;
+    font-size: $font-size-headline-component;
+    font-weight: 100;
+  }
+}
+

@@ -54,6 +54,10 @@ $page-max-width: 1180px;
 
 // -- MIXINS
 
+@mixin put-background {
+  background: red;
+}
+
 @mixin theme-background {
   background: linear-gradient(-22deg, $c-primary-lighter 30%, $c-primary 100%);
 }
