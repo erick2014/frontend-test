@@ -18,6 +18,9 @@ html {
   font-size: 16px;
   font-weight: 300; }
 
+body {
+  margin: 0; }
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -37,10 +40,13 @@ html {
     clip: auto; }
 
 nav ul {
-  padding: 0; }
+  padding-left: 8px; }
 
 nav li {
   display: inline-block; }
+
+main {
+  margin: 8px; }
 
 .title-box {
   background: linear-gradient(-22deg, #7b64e2 30%, #311b92 100%);
@@ -73,3 +79,17 @@ nav li {
   color: #7b64e2;
   font-size: 30px;
   font-weight: 100; }
+
+.section-shop ol {
+  list-style: none;
+  padding: 0; }
+  .section-shop ol li {
+    margin-bottom: 10px;
+    border: 1px dashed #e0e0e0;
+    padding: 10px 10px 0; }
+    .section-shop ol li h3 {
+      margin: 0 0 18px; }
+
+.section-shop footer p {
+  display: inline-block;
+  margin: 0 0 10px; }

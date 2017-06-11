@@ -54,10 +54,6 @@ $page-max-width: 1180px;
 
 // -- MIXINS
 
-@mixin put-background {
-  background: red;
-}
-
 @mixin theme-background {
   background: linear-gradient(-22deg, $c-primary-lighter 30%, $c-primary 100%);
 }
@@ -141,6 +137,10 @@ html {
   line-height: $line-height-factor-base;
   font-size: $font-size-base;
   font-weight: $font-weight-base;
+}
+
+body {
+  margin: 0;
 }
 
 .container {

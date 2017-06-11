@@ -2,12 +2,16 @@
 
 nav {
   ul {
-    padding: 0;
+    padding-left: 8px;
   }
 
   li {
     display: inline-block;
   }
+}
+
+main {
+  margin: 8px;
 }
 
 .title-box {
@@ -52,6 +56,30 @@ nav {
     color: $c-primary-lighter;
     font-size: $font-size-headline-component;
     font-weight: 100;
+  }
+
+  ol {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+      border: 1px dashed #e0e0e0;
+      padding: 10px 10px 0;
+
+      h3 {
+        margin: 0 0 18px;
+      }
+    }
+  }
+}
+
+.section-shop {
+  footer {
+    p {
+      display: inline-block;
+      margin: 0 0 10px;
+    }
   }
 }
 
