@@ -40,13 +40,13 @@ body {
     clip: auto; }
 
 nav ul {
-  padding-left: 8px; }
+  padding-left: 10px; }
 
 nav li {
   display: inline-block; }
 
 main {
-  margin: 8px; }
+  margin: 8px 10px; }
 
 .title-box {
   background: linear-gradient(-22deg, #7b64e2 30%, #311b92 100%);
@@ -90,6 +90,21 @@ main {
     .section-shop ol li h3 {
       margin: 0 0 18px; }
 
-.section-shop footer p {
-  display: inline-block;
-  margin: 0 0 10px; }
+.section-shop footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px; }
+  .section-shop footer p {
+    margin: 0; }
+  .section-shop footer button {
+    box-shadow: none;
+    background-color: transparent;
+    transition: none;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    color: #311b92;
+    font-size: 16px; }
+    .section-shop footer button:hover {
+      cursor: pointer; }

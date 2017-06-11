@@ -2,7 +2,7 @@
 
 nav {
   ul {
-    padding-left: 8px;
+    padding-left: 10px;
   }
 
   li {
@@ -11,7 +11,7 @@ nav {
 }
 
 main {
-  margin: 8px;
+  margin: 8px 10px;
 }
 
 .title-box {
@@ -76,9 +76,16 @@ main {
 
 .section-shop {
   footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
     p {
-      display: inline-block;
-      margin: 0 0 10px;
+      margin: 0;
+    }
+
+    button {
+      @include text-button;
     }
   }
 }
