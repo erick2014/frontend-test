@@ -88,7 +88,10 @@ main {
     border: 1px dashed #e0e0e0;
     padding: 10px 10px 0; }
     .section-shop ol li h3 {
-      margin: 0 0 18px; }
+      margin: 0;
+      font-weight: 400; }
+    .section-shop ol li .box-text {
+      margin: 10px 0; }
 
 .section-shop footer {
   display: flex;

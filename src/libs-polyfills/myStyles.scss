@@ -68,7 +68,12 @@ main {
       padding: 10px 10px 0;
 
       h3 {
-        margin: 0 0 18px;
+        margin: 0;
+        font-weight: $font-weight-bold;
+      }
+
+      .box-text {
+        margin: $vertical-rythm-spacing-text 0;
       }
     }
   }
