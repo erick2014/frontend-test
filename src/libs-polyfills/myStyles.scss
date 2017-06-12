@@ -12,7 +12,7 @@ nav {
 }
 
 main {
-  margin: 0 10px $vertical-rythm-spacing-component 10px;
+  margin: 0 0 $vertical-rythm-spacing-component;
 }
 
 .title-box {
@@ -53,6 +53,8 @@ main {
 }
 
 .section-shop {
+  margin: 0 10px;
+
   h2 {
     font-size: $font-size-headline-component-large;
     color: $c-primary;
@@ -60,12 +62,18 @@ main {
     margin: 0;
   }
 
+  .dashed-box {
+    margin-bottom: 10px;
+    border: 1px dashed $c-secondary-darker;
+    padding: 10px 10px 0;
+  }
+
   ol {
     list-style: none;
     padding: 0;
 
     li {
-      margin-bottom: 10px;
+      margin: 0 10px 10px 0;
       border: 1px dashed $c-secondary-darker;
       padding: 10px 10px 0;
 
@@ -98,6 +106,7 @@ main {
 }
 
 .section-shoppingcart {
+  margin: 0 10px;
   background-color: #f7f7f7;
   padding: 20px;
 
@@ -198,6 +207,33 @@ main {
   span {
     color: $c-secondary;
     font-weight: $font-weight-bolder;
+  }
+}
+
+//media queries
+@media screen and (min-width: 1300px) {
+  main {
+    display: flex;
+  }
+
+  article.section-shop {
+    margin-left: 10px;
+  }
+
+  article.section-shoppingcart {
+    margin-right: 10px;
+  }
+
+  .section-shop {
+    ol {
+      display: flex;
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+
+    li {
+      width: 370px;
+    }
   }
 }
 

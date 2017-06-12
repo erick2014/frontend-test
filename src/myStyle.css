@@ -47,7 +47,7 @@ nav li {
   display: inline-block; }
 
 main {
-  margin: 0 10px 30px 10px; }
+  margin: 0 0 30px; }
 
 .title-box {
   background: linear-gradient(-22deg, #7b64e2 30%, #311b92 100%);
@@ -76,24 +76,29 @@ main {
 .home a {
   color: #7b64e2; }
 
-.section-shop h2 {
-  font-size: 35px;
-  color: #311b92;
-  font-weight: 300;
-  margin: 0; }
-
-.section-shop ol {
-  list-style: none;
-  padding: 0; }
-  .section-shop ol li {
+.section-shop {
+  margin: 0 10px; }
+  .section-shop h2 {
+    font-size: 35px;
+    color: #311b92;
+    font-weight: 300;
+    margin: 0; }
+  .section-shop .dashed-box {
     margin-bottom: 10px;
     border: 1px dashed #cccccc;
     padding: 10px 10px 0; }
-    .section-shop ol li h3 {
-      margin: 0;
-      font-weight: 400; }
-    .section-shop ol li .box-text {
-      margin: 10px 0; }
+  .section-shop ol {
+    list-style: none;
+    padding: 0; }
+    .section-shop ol li {
+      margin: 0 10px 10px 0;
+      border: 1px dashed #cccccc;
+      padding: 10px 10px 0; }
+      .section-shop ol li h3 {
+        margin: 0;
+        font-weight: 400; }
+      .section-shop ol li .box-text {
+        margin: 10px 0; }
 
 .section-shop footer {
   display: flex;
@@ -115,6 +120,7 @@ main {
       cursor: pointer; }
 
 .section-shoppingcart {
+  margin: 0 10px;
   background-color: #f7f7f7;
   padding: 20px; }
   .section-shoppingcart h2 {
@@ -237,3 +243,17 @@ main {
   .bottom-footer span {
     color: #fff;
     font-weight: 600; }
+
+@media screen and (min-width: 1300px) {
+  main {
+    display: flex; }
+  article.section-shop {
+    margin-left: 10px; }
+  article.section-shoppingcart {
+    margin-right: 10px; }
+  .section-shop ol {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap; }
+  .section-shop li {
+    width: 370px; } }
