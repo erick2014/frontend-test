@@ -210,18 +210,57 @@ main {
   }
 }
 
+@media screen and (min-width: 600px) {
+  .img-box {
+    background-image: url('themes/netcentric/title.small.2x.png');
+    background-repeat: no-repeat;
+    height: 350px;
+    background-size: 100% 783px;
+  }
+
+  .title-box {
+    height: 350px;
+
+    h3 {
+      top: 136px;
+      left: 160px;
+    }
+  }
+}
+
 //media queries
 @media screen and (min-width: 1300px) {
+  .img-box {
+    background-image: url('themes/netcentric/title.large.png');
+    background-repeat: no-repeat;
+    height: 350px;
+    background-size: 100% 527px;
+  }
+
+  .title-box {
+    height: 350px;
+
+    h3 {
+      left: 112px;
+    }
+  }
+
+  nav {
+    ul {
+      padding: 0 0 0 40px;
+    }
+  }
+
   main {
     display: flex;
   }
 
   article.section-shop {
-    margin-left: 10px;
+    margin-left: 40px;
   }
 
   article.section-shoppingcart {
-    margin-right: 10px;
+    margin-right: 40px;
   }
 
   .section-shop {
