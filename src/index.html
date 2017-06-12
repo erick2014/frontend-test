@@ -69,29 +69,28 @@
         </li>
       </ol>
     </article>
-    <article id="section-shoppingcart">
+    <article class="section-shoppingcart">
       <h2>Your boat's shopping cart</h2>
-      <p>&hellip;is empty.</p>
-      <form id="shoppingcart-form">
+      <form class="shoppingcart-form">
         <table>
           <thead>
             <tr>
-              <th>Product</th>
-              <th>Price</th>
-              <th>Quantity</th>
+              <th class="tex-ali-lef tbl-title">Product</th>
+              <th class="tbl-title">Price</th>
+              <th class="tbl-title">Quantity</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>
-                <h3>PLACEHOLDER</h3>
-                <p>PLACEHOLDER</p>
+                <h3>Enlightening book</h3>
+                <p>There's no rush out there. Take your time for a good read</p>
                 <div>
-                  <button>Remove</button>
+                  <button class="rem-btn">Remove</button>
                 </div>
               </td>
               <td>
-                <output></output>
+                <output>¢5.99</output>
               </td>
               <td>
                 <input type="number" min="1" value="1">
@@ -105,22 +104,57 @@
                 </span>
               </td>
             </tr>
+            <tr>
+              <td colspan="3">
+                <div class="line-sep"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h3>Enlightening book</h3>
+                <p>There's no rush out there. Take your time for a good read</p>
+                <div>
+                  <button class="rem-btn">Remove</button>
+                </div>
+
+              </td>
+              <td>
+                <output>¢5.99</output>
+              </td>
+              <td>
+                <input type="number" min="1" value="1">
+                <span>
+                <button type="button" aria-label="decrease">
+                -
+                </button>
+                <button type="button" aria-label="step up">
+                +
+                </button>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <div class="line-sep"></div>
+              </td>
+            </tr>
           </tbody>
           <tfoot>
             <tr>
               <td colspan="3">
                 <ol>
                   <li>
-                    <label>Price before <abbr title="Value Added Tax">VAT</abbr>:</label>
-                    <output></output>
+                    <label><em>Price before <abbr title="Value Added Tax">VAT</abbr></em>:</label>
+                    <output>¢61.97</output>
                   </li>
                   <li>
-                    <label><abbr title="Value Added Tax">VAT</abbr> @ <strong></strong>%:</label>
-                    <output></output>
+                    <label><em><abbr title="Value Added Tax">VAT</abbr> @ <strong>20</strong>%</em>:</label>
+                    <output>¢12.39</output>
+                    <div class="line-sep"></div>
                   </li>
                   <li>
-                    <label>Total to be paid:</label>
-                    <output></output>
+                    <label><em>Total to be paid:</em></label>
+                    <output class="tot-pai">¢74.36</output>
                   </li>
                 </ol>
               </td>
@@ -131,16 +165,15 @@
           <p>
             <em>Free shipping! We will fly your order to your boat with one of our Netcentric drones the moment you click that checkout button!</em>
           </p>
-          <a href="#">Continue shopping</a> <em>or</em> <button type="submit" form="shoppingcart-form">Proceed to Checkout</button>
+          <a href="#">Continue shopping</a>
+          <em>or</em>
+          <button type="submit" form="shoppingcart-form">Proceed to Checkout</button>
         </footer>
       </form>
     </article>
   </main>
-  <footer>
-    <a href="http://netcentric.biz">
-    Link to Netcentric Website
-    </a>
-    &copy; 2017
+  <footer class="bottom-footer">
+    <a href="http://netcentric.biz">netcentric</a> <span>&copy; 2017</span>
   </footer>
   <script src="main.js"></script>
 </body>

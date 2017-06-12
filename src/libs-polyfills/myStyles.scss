@@ -2,7 +2,8 @@
 
 nav {
   ul {
-    padding-left: 10px;
+    padding: 0 0 0 10px;
+    margin: $vertical-rythm-spacing-component 0;
   }
 
   li {
@@ -11,7 +12,7 @@ nav {
 }
 
 main {
-  margin: 8px 10px;
+  margin: 0 10px $vertical-rythm-spacing-component 10px;
 }
 
 .title-box {
@@ -53,9 +54,10 @@ main {
 
 .section-shop {
   h2 {
-    color: $c-primary-lighter;
-    font-size: $font-size-headline-component;
-    font-weight: 100;
+    font-size: $font-size-headline-component-large;
+    color: $c-primary;
+    font-weight: $font-weight-regular;
+    margin: 0;
   }
 
   ol {
@@ -64,7 +66,7 @@ main {
 
     li {
       margin-bottom: 10px;
-      border: 1px dashed #e0e0e0;
+      border: 1px dashed $c-secondary-darker;
       padding: 10px 10px 0;
 
       h3 {
@@ -92,6 +94,110 @@ main {
     button {
       @include text-button;
     }
+  }
+}
+
+.section-shoppingcart {
+  background-color: #f7f7f7;
+  padding: 20px;
+
+  h2 {
+    font-size: $font-size-headline-component-large;
+    margin: 0 0 $vertical-rythm-spacing-text;
+    color: $c-primary;
+    font-weight: $font-weight-regular;
+  }
+}
+
+.shoppingcart-form {
+  .tex-ali-lef {
+    text-align: left;
+  }
+
+  .tbl-title {
+    font-size: $font-size-table-header;
+    color: $c-primary;
+    font-weight: $font-weight-regular;
+  }
+
+  input[type='number'] {
+    width: 22%;
+  }
+
+  button[aria-label='decrease'],
+  button[aria-label='step up'] {
+    @include cart-button;
+
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .rem-btn {
+    @include text-button;
+  }
+
+  .line-sep {
+    width: 100%;
+    height: 1px;
+    background: $c-secondary-darker;
+    margin-top: 5px;
+  }
+
+  tfoot {
+    output {
+      font-weight: $font-weight-bold;
+    }
+
+    td {
+      text-align: right;
+    }
+
+    ol {
+      list-style: none;
+      padding: 0;
+    }
+
+    output {
+      min-width: 75px;
+      display: inline-block;
+    }
+
+    .tot-pai {
+      font-size: $font-size-final-output;
+      color: $c_primary;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  footer {
+    a {
+      color: $c-primary;
+    }
+
+    button {
+      @include cart-button;
+
+      margin-left: 5px;
+    }
+  }
+}
+
+.bottom-footer {
+  @include theme-background;
+
+  padding: $vertical-rythm-spacing-text 0;
+  display: flex;
+
+  a {
+    @include link-with-logo;
+
+    font-size: $font-size-headline-primary;
+    margin: 0 5px;
+  }
+
+  span {
+    color: $c-secondary;
+    font-weight: $font-weight-bolder;
   }
 }
 
