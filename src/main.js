@@ -6,7 +6,7 @@ class ShoppingCart {
     return this.cartProducts;
   }
 
-  addArticleToCart( item ){
+  addNewArticle( item ){
     this.cartProducts.push(item);
   }
 
@@ -17,6 +17,54 @@ class ShoppingCart {
   showCartInView(){
     $('.section-shoppingcart').css({'display':'block'})
   }
+
+  removeItemFromCart(id,name){
+    //remove element from dom
+    $('.shoppingcart-form table tbody #'+id).remove( );
+    //remove from array
+    var newCartProds=this.cartProducts.filter( function(item){
+      if( item.name !=item.name ){
+        return item
+      }
+    })
+    this.cartProducts=newCartProds;
+
+  }
+
+  addItemToCart(product){
+    var idNum=Math.random().toString();
+    var cartProduct=`<tr id="${idNum}">
+                      <td>
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                        <div>
+                          <button data-item-id="${idNum}" data-item-name="${product.name}" class="rem-btn" >Remove</button>
+                        </div>
+
+                      </td>
+                      <td>
+                        <output>€${product.price}</output>
+                      </td>
+                      <td>
+                        <input  type="number" min="1" value="1">
+                        <span>
+                        <button  class="substract-quantity-item" type="button" aria-label="decrease">
+                        -
+                        </button>
+                        <button class="add-quantity-item" type="button" aria-label="step up">
+                        +
+                        </button>
+                        </span>
+                      </td>
+                    </tr>
+                     <tr>
+                      <td colspan="3">
+                        <div class="line-sep"></div>
+                      </td>
+                    </tr>`;
+
+      $('.shoppingcart-form table tbody').append( cartProduct )
+  }
 }
 
 var cart=new ShoppingCart();
@@ -26,10 +74,22 @@ if( cart.cartElements.length===0 ){
   cart.hideCartInView();
 }
 
+$(document).on('click','.add-quantity-item',function(e){
+  console.log("increasing quantity..")
+
+})
+
+$(document).on('click','.rem-btn',function(e){
+  var itemName=$(this).attr('data-item-name');
+  var itemId=$(this).attr('data-item-id');
+  cart.removeItemFromCart( itemId,itemName );
+})
+
 /*Add to cart click handler*/
 $('.add-to-cart-btn').click(function(e){
-  var cartData=$(this).attr("data-shop-listing");
+  var cartData=$(this).attr('data-shop-listing');
   cartData=$.parseJSON(cartData);
-  cart.addArticleToCart(cartData);
+  cart.addNewArticle(cartData);
   cart.showCartInView();
+  cart.addItemToCart(cartData)
 })
