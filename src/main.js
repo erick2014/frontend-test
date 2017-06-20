@@ -1,5 +1,5 @@
 class ShoppingCart {
-  constructor( name ){
+  constructor(){
     this.cartProducts=[];
   }
   get cartElements(){
@@ -23,7 +23,7 @@ class ShoppingCart {
     $('.shoppingcart-form table tbody #'+id).remove( );
     //remove from array
     var newCartProds=this.cartProducts.filter( function(item){
-      if( item.name !=item.name ){
+      if( item.name !=name ){
         return item
       }
     })
@@ -38,7 +38,11 @@ class ShoppingCart {
                         <h3>${product.name}</h3>
                         <p>${product.description}</p>
                         <div>
-                          <button data-item-id="${idNum}" data-item-name="${product.name}" class="rem-btn" >Remove</button>
+                          <button
+                              data-item-id="${idNum}"
+                              data-item-name="${product.name}" class="rem-btn" >
+                            Remove
+                          </button>
                         </div>
 
                       </td>
@@ -47,10 +51,13 @@ class ShoppingCart {
                       </td>
                       <td>
                         <input  type="number" min="1" value="1">
-                        <span>
-                        <button  class="substract-quantity-item" type="button" aria-label="decrease">
-                        -
-                        </button>
+                          <span>
+                            <button
+                              class="substract-quantity-item"
+                              type="button"
+                              aria-label="decrease">
+                            -
+                          </button>
                         <button class="add-quantity-item" type="button" aria-label="step up">
                         +
                         </button>
@@ -74,19 +81,19 @@ if( cart.cartElements.length===0 ){
   cart.hideCartInView();
 }
 
-$(document).on('click','.add-quantity-item',function(e){
-  console.log("increasing quantity..")
+$(document).on('click','.add-quantity-item',function(){
+ // console.log('increasing quantity..');
 
 })
 
-$(document).on('click','.rem-btn',function(e){
+$(document).on('click','.rem-btn',function(){
   var itemName=$(this).attr('data-item-name');
   var itemId=$(this).attr('data-item-id');
   cart.removeItemFromCart( itemId,itemName );
 })
 
 /*Add to cart click handler*/
-$('.add-to-cart-btn').click(function(e){
+$('.add-to-cart-btn').click(function(){
   var cartData=$(this).attr('data-shop-listing');
   cartData=$.parseJSON(cartData);
   cart.addNewArticle(cartData);
